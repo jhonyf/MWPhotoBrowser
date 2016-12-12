@@ -833,7 +833,6 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
                 AVPlayerLayer *layer = [AVPlayerLayer layer];
                 CGRect pageFrame = [self frameForPageAtIndex:index];
                 [layer setFrame:pageFrame];
-                [layer setBackgroundColor:[UIColor redColor].CGColor];
                 [_pagingScrollView.layer addSublayer:layer];
                 page.avPlayerLayer = layer;
             }
