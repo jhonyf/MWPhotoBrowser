@@ -52,6 +52,7 @@
 @property (nonatomic) BOOL autoPlayOnAppear;
 @property (nonatomic) NSUInteger delayToHideElements;
 @property (nonatomic, readonly) NSUInteger currentIndex;
+@property (nonatomic) BOOL tapToScroll;
 
 // Customise image selection icons as they are the only icons with a colour tint
 // Icon should be located in the app's main bundle
@@ -71,5 +72,8 @@
 // Navigation
 - (void)showNextPhotoAnimated:(BOOL)animated;
 - (void)showPreviousPhotoAnimated:(BOOL)animated;
+
+// Custom 
+- (void)playVideoAtIndex:(NSUInteger)index;
 
 @end

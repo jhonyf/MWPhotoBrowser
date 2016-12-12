@@ -6,6 +6,7 @@
 //  Copyright 2010 d3i. All rights reserved.
 //
 
+#import <AVKit/AVKit.h>
 #import <Foundation/Foundation.h>
 #import "MWPhotoProtocol.h"
 #import "MWTapDetectingImageView.h"
@@ -21,7 +22,7 @@
 @property (nonatomic) id <MWPhoto> photo;
 @property (nonatomic, weak) MWCaptionView *captionView;
 @property (nonatomic, weak) UIButton *selectedButton;
-@property (nonatomic, weak) UIButton *playButton;
+@property (nonatomic, weak) AVPlayerLayer *avPlayerLayer;
 
 - (id)initWithPhotoBrowser:(MWPhotoBrowser *)browser;
 - (void)displayImage;
