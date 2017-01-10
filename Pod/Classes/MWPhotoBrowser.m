@@ -1121,9 +1121,9 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
         CGRect pageFrame = [self frameForPageAtIndex:index];
         [_pagingScrollView setContentOffset:CGPointMake(pageFrame.origin.x - PADDING, 0) animated:animated];
         [self updateNavigation];
-    } else {
-        // if no more pages to scroll, go back to original view
-        [self.navigationController popViewControllerAnimated:YES];
+    } else if ([_delegate respondsToSelector:@selector(photoBrowserDidFinish:)]) {
+        // Call delegate method and let them dismiss us
+        [_delegate photoBrowserDidFinish:self];
     }
     // Update timer to give more time
     [self hideControlsAfterDelay];

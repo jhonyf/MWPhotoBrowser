@@ -134,5 +134,8 @@
 - (void)loadAdjacentPhotosIfNecessary:(id<MWPhoto>)photo;
 - (void)releaseAllUnderlyingPhotos:(BOOL)preserveCurrent;
 
+// Video
+- (void)videoFinishedCallback:(NSNotification*)notification;
+- (void)clearCurrentVideo;
 @end
 
